@@ -60,3 +60,28 @@ section {
     width: 100%;
     height: auto;
 }
+
+.footer {
+    display: grid;
+    grid-auto-flow: column;
+    border-top: 1px solid $light-grayish-blue;
+    ul {
+        list-style-image: url('/images/icon-check.svg');
+        line-height: 2rem;
+        padding-left: 3rem;
+    }
+    button {
+        height: 2.5rem;
+        width: 11rem;
+        border-radius: 1.25rem;
+        border: none;
+        place-self: center;
+        background-color: $dark-saturated-blue;
+        color: $pale-blue;
+        cursor: pointer;
+        font-family: 'Manrope', sans-serif;
+        &:hover {
+            color: $light-grayish-blue2;
+        }
+    }
+}

@@ -50,4 +50,29 @@ section {
   height: auto;
 }
 
+.footer {
+  display: grid;
+  grid-auto-flow: column;
+  border-top: 1px solid #eaeefb;
+}
+.footer ul {
+  list-style-image: url("/images/icon-check.svg");
+  line-height: 2rem;
+  padding-left: 3rem;
+}
+.footer button {
+  height: 2.5rem;
+  width: 11rem;
+  border-radius: 1.25rem;
+  border: none;
+  place-self: center;
+  background-color: #293356;
+  color: #bdccff;
+  cursor: pointer;
+  font-family: "Manrope", sans-serif;
+}
+.footer button:hover {
+  color: #cdd7ee;
+}
+
 /*# sourceMappingURL=style.css.map */
