@@ -18,21 +18,25 @@
       <p>Sign-up for our 30-day trial. No credit card required.</p>
     </div>
     <section>
-      <div class="row">
-        Pageviews
+      <div class="row price-selection">
+        <div class="pageviews">
+          <span class="pageviews-total"></span>Pageviews
+        </div>
         <input type="range" id="vol" name="vol" min="0" max="50">
-        $ /month
+        <div class="price">
+          $<span class="price-total"></span> /month
+        </div>
       </div>
-      <div class="row">
-
-      </div>
-      <div class="row">
-        Monthly Billing
+      <div class="row billing-choice">
+        <span>Monthly Billing</span>
         <label class="switch">
           <input type="checkbox">
           <span class="slider round"></span>
         </label>
-        Yearly Billing 25% discount
+        <span>Yearly Billing </span>
+        <div class="discount">
+          25% discount
+        </div>
       </div>
       <div class="row footer">
         <ul>

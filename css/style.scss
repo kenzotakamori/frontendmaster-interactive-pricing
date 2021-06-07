@@ -51,6 +51,26 @@ section {
     height: auto;
 }
 
+.price-selection {
+    display: grid;
+    input {
+        grid-column: 1 / 3;
+        grid-row: 2;
+    }
+    @media (max-width: 800px) {
+        grid-auto-flow: row;
+        input {
+            grid-column: unset;
+            grid-row: unset;
+        }
+    }
+}
+
+.billing-choice {
+    display: grid;
+    grid-auto-flow: column;
+}
+
 .footer {
     display: grid;
     grid-auto-flow: column;
