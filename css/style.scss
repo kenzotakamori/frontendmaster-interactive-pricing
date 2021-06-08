@@ -27,7 +27,7 @@ body {
 }
 
 .container {
-    width: 40vw;
+    width: 600px;
     display: grid;
     grid-template-rows: 1fr 2fr;
 }
@@ -54,11 +54,26 @@ section {
 
 .price-selection {
     display: grid;
+    align-items: center;
     padding: 3rem;
     gap: 3rem;
     input {
         grid-column: 1 / 3;
         grid-row: 2;
+    }
+    .pageviews {
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+        font-size: .75rem;
+        font-weight: 800;
+    }
+    .price {
+        text-align: right;
+    }
+    #price-total {
+        color: $dark-saturated-blue;
+        font-size: 2rem;
+        font-weight: 800;
     }
     @media (max-width: 800px) {
         grid-auto-flow: row;
@@ -74,6 +89,13 @@ section {
     grid-auto-flow: column;
     padding: 0 3rem 3rem 10rem;
     place-items: center;
+    .discount {
+        color: $light-red;
+        background-color: $light-grayish-red;
+        font-size: 0.75rem;
+        padding: 0.25rem;
+        border-radius: 0.5rem;
+    }
 }
 
 .footer {
