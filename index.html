@@ -7,9 +7,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Interactive pricing component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
   <div class="container">
@@ -20,17 +19,19 @@
     <section>
       <div class="row price-selection">
         <div class="pageviews">
-          <span class="pageviews-total"></span>Pageviews
+          <span id="pageviews-total"></span> Pageviews
         </div>
         <input type="range" id="pageview" name="pageview" min="0" max="200">
         <div class="price">
-          $<span class="price-total"></span> /month
+          <span id="price-total"></span> 
+          /
+          <span id="frequency"></span>
         </div>
       </div>
       <div class="row billing-choice">
         <span>Monthly Billing</span>
         <label class="switch">
-          <input type="checkbox">
+          <input type="checkbox" id="billing">
           <span class="slider round"></span>
         </label>
         <span>Yearly Billing </span>
