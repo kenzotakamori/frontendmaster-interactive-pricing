@@ -69,7 +69,7 @@ input[type=range]::-webkit-slider-runnable-track {
   width: 100%;
   height: 10px;
   cursor: pointer;
-  background: #B6B6B6;
+  background: #a5f3eb;
   border-radius: 10px;
 }
 
@@ -88,16 +88,12 @@ input[type=range]::-webkit-slider-thumb {
   margin-top: -17.5px;
 }
 
-input[type=range]:focus::-webkit-slider-runnable-track {
-  background: #B6B6B6;
-}
-
 input[type=range]::-moz-range-track {
   width: 100%;
   height: 10px;
   cursor: pointer;
   box-shadow: 0px 0px 0px #000000;
-  background: #B6B6B6;
+  background: red;
   border-radius: 10px;
 }
 
@@ -159,6 +155,12 @@ html {
   background-repeat: no-repeat;
   background-size: 100%;
 }
+@media (max-width: 800px) {
+  html {
+    height: auto;
+    background-size: unset;
+  }
+}
 
 body {
   margin: 0;
@@ -172,6 +174,7 @@ body {
 }
 @media (max-width: 800px) {
   body {
+    height: auto;
     width: 375px;
   }
 }
@@ -180,6 +183,12 @@ body {
   width: 600px;
   display: grid;
   grid-template-rows: 1fr 2fr;
+}
+@media (max-width: 800px) {
+  .container {
+    width: 350px;
+    grid-template-rows: unset;
+  }
 }
 
 .intro {
@@ -200,6 +209,12 @@ section {
   width: 100%;
   height: auto;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+@media (max-width: 800px) {
+  section {
+    display: grid;
+    margin-bottom: 2rem;
+  }
 }
 
 .price-selection {
@@ -229,6 +244,12 @@ section {
 @media (max-width: 800px) {
   .price-selection {
     grid-auto-flow: row;
+    gap: 1rem;
+    padding: 2rem;
+    text-align: center;
+  }
+  .price-selection .price {
+    text-align: center;
   }
   .price-selection input {
     grid-column: unset;
@@ -249,15 +270,30 @@ section {
   padding: 0.25rem;
   border-radius: 0.5rem;
 }
+.billing-choice .discount .text-mobile {
+  display: none;
+}
+@media (max-width: 800px) {
+  .billing-choice {
+    padding: 0 0 3rem;
+  }
+  .billing-choice .discount .text-mobile {
+    display: block;
+  }
+  .billing-choice .discount .text-desktop {
+    display: none;
+  }
+}
 
 .footer {
   display: grid;
   grid-template-columns: 1fr auto;
   border-top: 1px solid #eaeefb;
-  padding: 2rem 3rem 2rem 4rem;
+  padding: 2rem 3rem;
 }
 .footer ul {
   list-style-image: url("/images/icon-check.svg");
+  list-style-position: inside;
   line-height: 2rem;
   padding: 0;
   margin: 0;
@@ -275,6 +311,17 @@ section {
 }
 .footer button:hover {
   color: #cdd7ee;
+}
+@media (max-width: 800px) {
+  .footer {
+    padding: 2rem;
+    grid-template-columns: unset;
+    grid-auto-flow: row;
+    text-align: center;
+  }
+  .footer ul {
+    padding-bottom: 2rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
